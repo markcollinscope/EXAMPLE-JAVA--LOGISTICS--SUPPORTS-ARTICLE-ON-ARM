@@ -1,0 +1,20 @@
+# This file is purely to test the comment stripping. 
+# Othwerwise ignore it.
+# Comments start with "#"
+# Comment!
+# Comment!
+# Comment!
+# Comment!
+# Comment!
+# Comment!
+# Comment!
+111111111111111111111111
+222222222222222222222222
+333333333333333333333333
+444444444444444444444444
+# Comment!
+555555555555555555555555
+# Comment!
+# Comment!
+666666666666666666666666
+777777777777777777777777:

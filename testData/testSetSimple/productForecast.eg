@@ -1,0 +1,16 @@
+# 10 Products. Each product predicted 10 sales per day.
+# Each Product requires 10 Ingredients (Qty).
+# So each Ingredient is required 10 (products) * 10 (days) * 10 (units per product)
+# Gives a daily requirement of 1000 units per ingredient.
+#
+,1/2/12,2/2/12,3/2/12,4/2/12,5/2/12,6/2/12,7/2/12,8/2/12,9/2/12,10/2/12
+Prod1,10,10,10,10,10,10,10,10,10,10
+Prod2,10,10,10,10,10,10,10,10,10,10
+Prod3,10,10,10,10,10,10,10,10,10,10
+Prod4,10,10,10,10,10,10,10,10,10,10
+Prod5,10,10,10,10,10,10,10,10,10,10
+Prod6,10,10,10,10,10,10,10,10,10,10
+Prod7,10,10,10,10,10,10,10,10,10,10
+Prod8,10,10,10,10,10,10,10,10,10,10
+Prod9,10,10,10,10,10,10,10,10,10,10
+Prod10,10,10,10,10,10,10,10,10,10,10
