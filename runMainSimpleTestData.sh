@@ -1,3 +1,5 @@
+. classpath.shi
+
 T="testData/testSetSimple"
 M="control/Control"
 

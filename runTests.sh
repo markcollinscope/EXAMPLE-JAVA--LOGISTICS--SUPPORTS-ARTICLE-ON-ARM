@@ -1,6 +1,8 @@
 # Run all unit tests.
 ## order is important to ensure dependencies are sorted correctly.
 
+. classpath.shi
+
 PACKAGES="utils ingredients products productLines parsers"
 TESTS="utils.testCheckedMap ingredients.testIngredient products.testProduct  productLines.testProductLine parsers.testParsers"
 

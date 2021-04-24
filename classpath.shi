@@ -1,0 +1,8 @@
+# common bash include for all bash files (*.sh)
+XLIB="./EXTERNAL-LIBS"
+
+CLASSPATH="$XLIB/hamcrest-core-1.3.jar:$XLIB/junit-4.13.2.jar:$CLASSPATH"
+export CLASSPATH
+
+echo CP: $CLASSPATH
+
