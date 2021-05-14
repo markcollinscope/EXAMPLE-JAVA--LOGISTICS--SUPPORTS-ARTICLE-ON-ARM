@@ -27,7 +27,7 @@ public class testCheckedMap {
                 assertTrue(Arrays.asList(NAMES).contains(aKey));
                 assertTrue(csm.containsKey(aKey));
 
-		String value = csm.get(aKey);
+                String value = csm.get(aKey);
                 assertEquals(aKey,value);
             }
         }

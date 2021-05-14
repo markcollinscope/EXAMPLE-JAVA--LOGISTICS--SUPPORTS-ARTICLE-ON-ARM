@@ -79,7 +79,7 @@ public class IngredientsListParser
                     throw new ParseError(
                     fileName, 
                     count+1, 
-                    "ingredient: " + ingredientName + " quantity measurement unit does not match ingredient as defined in Ingredient Stock File ");
+                    "ingredient: " + ingredientName + " quantity measurement unit does not match ingredient as defined in Ingredient Stock Level File");
                }
             } catch (UnknownKeyException uke) {
                 throw new ParseError(
@@ -95,10 +95,11 @@ public class IngredientsListParser
                 throw new ParseError(
                     fileName, 
                     count+1, 
-                    "Duplicate ingredient: " + ingredientName + " - an ingredient can only appear once in a product ingredient list");
+                    "Duplicate ingredient: " + ingredientName + " - an ingredient can only appear once in a Product Ingredient List");
             }                 
             count++;
          }
+         
          count++;
     }
 
@@ -112,5 +113,3 @@ public class IngredientsListParser
         }    
     }
 }
-
-

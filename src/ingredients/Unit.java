@@ -17,7 +17,7 @@ class UnitMultiplicationFactor
     }
 }
 
-public enum Unit 
+public enum Unit
 {
    G, ML, QTY, UNDEFINED;
 
@@ -33,7 +33,7 @@ public enum Unit
               ProgrammingError.abort("initialising STRING_TO_UNIT_MAP");
           }
        }
-   };
+  };
 
    private static final CheckedMap<Unit,String> UNIT_TO_STRING_MAP = new CheckedMap<Unit,String>() {
        {
