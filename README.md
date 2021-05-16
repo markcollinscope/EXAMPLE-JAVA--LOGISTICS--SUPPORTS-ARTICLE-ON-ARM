@@ -6,7 +6,7 @@ https://www.infoq.com/articles/arm-enterprise-applications/ - An Architectural R
 
 ### Summary - Packages and their Layers.
 
-To understand this application it is necessary to read the requirement below, but in summary the packages are distributed as follows across the strata (informally layers) of the ARM:
+To understand this application it is necessary to read the requirement below, but in summary the packages are distributed as follows across the strata (informally layers) of the ARM (as referenced in the aforementioned article):
 
 * *Control* - is part of the Interface Layer - it deals with *user-input* (command-line arguments) and as such performs a similar role to a GUI input. In particular it uses the same Application Layer 'API' as  GUI most likely would.
 * *Parsers* - Interface Layer - contains code to translate from input file (via reasonably sophisticated parsing)  and to make appropriate calls into the Application layer (via the 'service API - which could be wrapped in a REST api - but isn't here).
