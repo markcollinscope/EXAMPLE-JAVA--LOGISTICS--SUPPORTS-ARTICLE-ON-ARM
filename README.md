@@ -218,4 +218,5 @@ Malt Loaf,50,50,50,50,50,50,50,50,50,50
 
 ## Credits
 
-This README was created using Typora - a very useful markdown editor that does its job without over-complicating matters - see https://typora.io/. 
+* Diagrams created using Enterprise Architect - an excellent CASE tool. With thanks to Sparx Systems - see https://sparxsystems.com/
+* README created using Typora - a very useful markdown editor that does its job without over-complicating matters - see https://typora.io/. 
