@@ -18,8 +18,6 @@ To understand this application it is necessary to read the requirement below, bu
 
 [TOC]
 
-
-
 ## Requirement
 
 A food manufacturing company has a requirement to rapidly <u>calculate the number of days of forecast demand</u> for its finished products that <u>their current stock levels of raw materials can support</u>. An application is required to support this.
@@ -98,29 +96,29 @@ Apart from the package structure the major design points are:
   ```
   $ROOT
   |-
-    |-products (Domain - see above)
-    |-productLines (Domain - see above)
-    |-parsers (Interface - see above)
+    |-products (Domain Layer - see above)
+    |-productLines (Applciation Layer - see above)
+    |-parsers (Interface Layer - see above)
     |-EXTERNAL-LIBS (for ease of use, copies of Jars used by App.)
-    |-ingredients (Domain - see above)
-    |-control(Interface - see above)
+    |-ingredients (Domain Layer - see above)
+    |-control(Interface Layer - see above)
     |-testData
     |  |-testSetGiven
     |  |-testSetSimple
-    |-utils (Infrastructure - see above)
+    |-utils (Infrastructure Layer - see above)
   ```
 
   Other information
 
 - test data (input files) is held under the testData directory in $ROOT. No surprises there.
 - there are two sets of test data (file) as per the discussion of scripts (.sh files) above.
-- To generate syntax errors, semantic errors ) just edit the test data files (all of which have a “.eg” extension and you'll see the errors being reported.
+- To generate syntax errors (or semantic errors)  just edit the test data files (all of which have a “.eg” extension and you'll see the errors being reported when you run the application or related test code.
 
 ### Improvements
 
 #### Runtime vs Checked Exceptions
 
-The single major thing I would improve here would be to make <u>DuplicateKeyException</u> and <u>UnknownKeyExcepion</u> (as raised by <u>CheckedMap</u> in <u>utils</u>) extend RuntimeException rather than Exception. There's much debate out there about this topic. I have come to *favour* the RuntimeException approach, exception *except* in specific circumstances (email me if you'd like to discuss! :-).
+The single major thing I would improve here would be to make <u>DuplicateKeyException</u> and <u>UnknownKeyExcepion</u> (as raised by <u>CheckedMap</u> in <u>utils</u>) extend RuntimeException rather than Exception. There's much debate out there about this topic. I have come to favour the RuntimeException approach, exception *except* in specific circumstances (email me if you'd like to discuss! :-).
 
 #### Unit as Infrastructure
 
