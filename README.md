@@ -14,10 +14,6 @@ To understand this application it is necessary to read the requirement below, bu
 * *Products* & *Ingredients* - Domain Layer - again called by the *ProductLine* package in Application Layer.
 * *Utils* - Infrastructure Layer - generic utilities not bound to this application particularly.
 
-## Contents
-
-[TOC]
-
 ## Requirement
 
 A food manufacturing company has a requirement to rapidly <u>calculate the number of days of forecast demand</u> for its finished products that <u>their current stock levels of raw materials can support</u>. An application is required to support this.
