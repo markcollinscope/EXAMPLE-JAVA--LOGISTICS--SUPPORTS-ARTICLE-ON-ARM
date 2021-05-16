@@ -23,9 +23,9 @@ public class Control
         List<String> lines = new ArrayList<String>();
         String line = null;
 
-        while ((line = bufferedReader.readLine()) != null) 
+        while ( (line = bufferedReader.readLine()) != null ) 
         {
-            if ( (line.length() == 0) || (!line.startsWith(new String("#"))) )
+            if ( (line.length() == 0) || ( ! line.startsWith(new String("#")) ) )
             {
                lines.add(line);
             }
@@ -34,16 +34,16 @@ public class Control
         return lines.toArray(new String[lines.size()]);
     }    
 
-    private static void Usage()
+    private static void showUsage()
     {
-        System.err.println("Usage: java <program name> <stock level file name> <product ingredients list file name> <product forecast list file name>\n");
-        System.exit(0);
+        System.err.println("Usage: java <program-name> <stock-level-file-name> <product-ingredients-list-file-name> <product-forecast-list-file-name>\n");
+        System.exit(1);
     }
 
-    private static void OpenFileError(Exception e) 
+    private static void openFileError(Exception e) 
     {
-        System.err.println("Error opening files: " + e.getMessage() );
-        Usage();
+        System.err.println("Error opening file(s): " + e.getMessage() );
+        showUsage();
     }
 
     private static void doCalculations(String ingName, ProductLine pl)
@@ -59,7 +59,7 @@ public class Control
 
     public static void main(String args[])
     {
-        if (args.length != 3) Usage();
+        if (args.length != 3) showUsage();
 
         FileReader stockLevelfr = null;
         FileReader ingredientsListfr = null;
@@ -77,7 +77,7 @@ public class Control
             productForecastfr = new FileReader(pfFile);
         }
         catch (IOException ioe) {
-            OpenFileError(ioe);
+            openFileError(ioe);
         }
 
         String[] currentFile = null;
@@ -105,15 +105,15 @@ public class Control
         }
         catch (IOException ioe)
         {
-           OpenFileError(ioe);
+           openFileError(ioe);
         }
         catch (ParseError pe)
         {
            System.err.println(pe.getMessage());
            System.err.printf("Line %d: <%s>\n", pe.line(), currentFile[pe.line()]);
-           System.exit(0);
+           System.exit(1);
         }
-        System.exit(1);
+        System.exit(0);
     }
 }
 

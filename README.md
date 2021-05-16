@@ -1,18 +1,18 @@
 ## Introduction
 
-This example is intended to support the following article (Architectural Reference Model):
+This Java language example is intended to support the following article:
 
-https://www.infoq.com/articles/arm-enterprise-applications/
+https://www.infoq.com/articles/arm-enterprise-applications/ - An Architectural Reference Model for larger applications.
 
-## 'Layering Model' (as per ARM).
+### Summary - Packages and their Layers.
 
-In terms of that article the packages are distrbuted as follows:
+To understand this application it is necessary to read the requirement below, but in summary the packages are distributed as follows across the strata (informally layers) of the ARM:
 
-* Control - is part of the Application Layer - it deails with *user-input* (command-line arguments) and as such performs a similar role to a GUI input.
-* Parsers - Interface Layer - contains code to translate from input file (via reasonably sophisicated parsing)  and to make appropriate calls into the Application layer (via the 'service API - which could be wrapped in a REST api - but isn't here).
-* ProductLine - Application layer. It exposes an "API" and calls down into the Domain Layer.
-* Products & Ingrediants - Domain Layer - used by ProductLine package in Application Layer.
-* Utils - Infrastructure - generic utilities not bound to this application particularly.
+* *Control* - is part of the Interface Layer - it deals with *user-input* (command-line arguments) and as such performs a similar role to a GUI input. In particular it uses the same Application Layer 'API' as  GUI most likely would.
+* *Parsers* - Interface Layer - contains code to translate from input file (via reasonably sophisticated parsing)  and to make appropriate calls into the Application layer (via the 'service API - which could be wrapped in a REST api - but isn't here).
+* *ProductLine* - Application layer. It exposes an "API" for Interface Layer to use and calls down into the Domain Layer.
+* *Products* & *Ingredients* - Domain Layer - again called by the *ProductLine* package in Application Layer.
+* *Utils* - Infrastructure Layer - generic utilities not bound to this application particularly.
 
 ## Requirement
 
@@ -48,7 +48,7 @@ The application is required to support the following:
 
 Here is the domain model for the requirement as stated:
 
-![domain-model](/home/mark/GIT/GITHUB/java-logistics-eg/README.diagrams/domain-model.png)
+![domain-model](README.diagrams/domain-model.png)
 
 NB: assume a multiplicity of <u>one</u> if no value shown, “*” indicates <u>0 to many</u>, as per UML. 
 
@@ -67,7 +67,7 @@ Other notes:
 
 The implementation has the following package structure and dependencies (NB: Not all dependencies are shown. Dependencies are transitive (so Parsers know about Products, etc...);  Utils is misc useful stuff. It is depended on by a lot; Dependencies are <u>unidirectional</u> and <u>acyclic</u> - as shown by arrowheads.
 
-![package-structure](/home/mark/GIT/GITHUB/java-logistics-eg/README.diagrams/package-structure.png)
+![package-structure](README.diagrams/package-structure.png)
 
 ### Design
 
